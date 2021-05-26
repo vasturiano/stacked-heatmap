@@ -142,6 +142,13 @@ export default Kapsule({
         state.transDuration = val?700:0;
       }
     },
+    enableHoverAnimations: {
+      default: true,
+      onChange(val, state) {
+        console.log('enableHoverAnimations',val, state)
+        state.disableAllHovers = !val;
+      }
+    },
 
     segmentTooltipContent: { triggerUpdate: false },
 
@@ -990,7 +997,7 @@ export default Kapsule({
 
       newSegments
         .on('mouseover', function() {
-          if ('disableHover' in state && state.disableHover)
+          if ('disableHover' in state && state.disableHover && !state.disableAllHovers)
             return;
 
           MoveToFront()(this);

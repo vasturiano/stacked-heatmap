@@ -74,6 +74,7 @@ myChart
 | <b>getVisibleStructure</b>() | Returns data representation of timelines currently visible in the chart. | - |
 | <b>getSvg</b>() | Returns graphic (SVG) representation of currently visible chart. | - |
 | <b>enableAnimations</b>([<i>boolean</i>]) | Getter/setter for whether to animate transitions. | true |
+| <b>enableHoverAnimations</b>([<i>boolean</i>]) | Getter/setter for whether to animate hover animations. | true |
 | <b>onLabelClick</b>([<i>function</i>]) | Getter/setter for the callback function for clicking on the Y axis labels. Callback will include the clicked label (if applicable) and group parameter: `onLabelClick(<string>, <string>)`. | `null` |
 | <b>onSegmentClick</b>([<i>function</i>]) | Getter/setter for the callback function for clicking on a segment. Callback will return a segment object: `onSegmentClick(segment)`. | `null` |
 | <b>segmentTooltipContent</b>([<i>function</i>]) | Getter/setter for the callback function to populate a custom tooltip for segments. The segment data point is provided as sole argument: `segmentTooltipContent(d)`. Supports plain text or HTML content. | `null` |
